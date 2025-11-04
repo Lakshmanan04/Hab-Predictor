@@ -1,0 +1,11 @@
+streamlit
+matplotlib
+numpy
+pandas
+Pillow
+torch
+torchvision
+joblib
+requests
+python-docx
+pytorch-grad-cam
