@@ -28,8 +28,7 @@ scaler_cellcount = joblib.load('scaler_cellcount.save')
 import requests
 import base64
 import os
-from dotenv import load_dotenv
-load_dotenv() 
+
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -224,7 +223,7 @@ def overlay_cam_on_image(img_pil: Image.Image, cam_map: np.ndarray, alpha=0.5) -
     return Image.fromarray(overlay)
 
 # Initialize Gemini client (ensure GOOGLE_API_KEY is set in env variables)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
+GEMINI_API_KEY = st.secrets["GEMINIAPIKEY"]
 GENAI_MODEL = "gemini-flash-latest"  # or set via env
 
 def generate_report(prompt_text, max_output_tokens=5000, temperature=0.7):
