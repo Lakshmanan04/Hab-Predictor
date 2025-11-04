@@ -8,4 +8,3 @@ torchvision==0.23.0
 joblib==1.4.2
 requests==2.32.3
 python-docx==1.2.0
-pytorch-grad-cam==1.5.5
